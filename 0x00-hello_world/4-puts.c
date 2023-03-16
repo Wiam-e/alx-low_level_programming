@@ -1,8 +1,7 @@
 #include<stdio.h>
-/*
-*Writing first C program
-*main program using puts function to print a line
-*return results: 0
+/**
+*main - a program that prints a line using puts function
+*Return: 0 (Success)
 */
 int main(void)
 {
