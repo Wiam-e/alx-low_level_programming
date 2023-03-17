@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
 *main - program that prints single digit numbs starting with 0
-*Retur: 0 (Success)
+*Return: 0 (Success)
 */
 int main(void)
 {
