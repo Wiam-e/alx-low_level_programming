@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-*main - a program that prints all possible combinations of single-digit numbers.
+*main - a program that prints all possible combinations of single digits
 *Return: 0 (Success)
 */
 int main(void)
@@ -12,8 +12,8 @@ putchar(i + '0');
 if (i < 9)
 {
 putchar(',');
-putchar(' ');
 }
+putchar(' ');
 }
 putchar('\n');
 return (0);
