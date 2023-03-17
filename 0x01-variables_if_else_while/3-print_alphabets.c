@@ -5,10 +5,8 @@
 */
 int main(void)
 {
-char l;
-l= 'a';
-char u;
-u= 'A';
+char l = 'a';
+char u = 'A';
 while (l <= 'z')
 {
 putchar(l);
@@ -16,7 +14,7 @@ l++;
 }
 while (u <= 'Z')
 {
-putchar(l);
+putchar(u);
 u++;
 }
 return (0);
