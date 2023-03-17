@@ -6,8 +6,8 @@
 int main(void)
 {
 char c;
-c = 'a';
 int i;
+c = 'a';
 i = 0;
 while (i < 10)
 {
