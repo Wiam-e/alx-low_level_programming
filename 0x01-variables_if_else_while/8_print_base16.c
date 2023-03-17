@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
 *main - a program that prints all numbers in base 16
-*Retyrn: 0 (Success)
+*Return: 0 (Success)
 */
 int main(void)
 {
@@ -12,7 +12,7 @@ while (i < 10)
 putchar(i + '0');
 i++;
 }
-while (c <='f')
+while (c <= 'f')
 {
 putchar(c);
 c++;
