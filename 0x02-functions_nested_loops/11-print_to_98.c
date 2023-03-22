@@ -18,7 +18,7 @@ break;
 }
 else
 {
-printf("%d \n", n);
+printf("%d,\n", n);
 }
 }
 }
@@ -33,7 +33,7 @@ break;
 }
 else
 {
-printf("%d, ", n);
+printf("%d,", n);
 }
 }
 }
