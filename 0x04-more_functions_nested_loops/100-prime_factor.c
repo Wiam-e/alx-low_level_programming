@@ -19,7 +19,7 @@ lf = n;
 n = n / div;
 if (n == 1)
 {
-printf("The largest prime factor is: %ld\n", lf);
+printf("%ld\n", lf);
 break;
 }
 }
