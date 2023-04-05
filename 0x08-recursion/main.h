@@ -10,4 +10,6 @@ int _sqrt_recursion(int n);
 int nat_sqrt(int n, int i);
 int is_prime_number(int n);
 int test_pnmbr(int n, int i);
+int is_palindrome(char *s);
+int test_pal(char *s, int l, int i);
 #endif
