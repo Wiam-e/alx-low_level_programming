@@ -16,7 +16,7 @@ f = 0;
 dg = 0;
 while (s[l] != '\0')
 l++;
-while (i < len && f == 0)
+while (i < l && f == 0)
 {
 if (s[i] == '-')
 ++d;
