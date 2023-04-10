@@ -17,26 +17,16 @@ if (argc != 2)
 printf("Error\n");
 return (1);
 }
-sum = atoi(argv[1]);
-count = 0;
-while (sum > 1)
+count = atoi(argv[1]);
+sum = 0;
+for (i = 0; i < 5 && count >= 0; i++)
 {
-for (i = 0; i < sizeof(cents[i]); i++)
+while (count >= cents[i])
 {
-if (sum >= cents[i])
-{
-count += sum / cents[i];
-sum = sum % cents[i];
+sum++;
+count -= cents[i];
 }
 }
-}
-if (sum == 1)
-count++;
-else
-{
-printf("Error\n");
-return (1);
-}
-printf("%d\n", count);
+printf("%d\n", sum);
 return (0);
 }
