@@ -9,7 +9,8 @@
 */
 int main(int argc, char *argv[])
 {
-int sum, count, i;
+int sum, count;
+unsigned int i;
 int cents[] = {25, 10, 5, 2};
 if (argc != 2)
 {
@@ -30,7 +31,6 @@ sum = sum % cents[i];
 }
 if (sum == 1)
 count++;
-}
 else
 {
 printf("Error\n");
