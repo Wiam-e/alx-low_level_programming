@@ -29,6 +29,7 @@ count += sum / cents[i];
 sum = sum % cents[i];
 }
 }
+}
 if (sum == 1)
 count++;
 else
