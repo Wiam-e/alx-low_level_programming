@@ -16,7 +16,7 @@ f = 0;
 dg = 0;
 while (s[l] != '\0')
 l++;
-while (i < len && f == 0)
+while (i < l && f == 0)
 {
 if (s[i] == '-')
 ++d;
@@ -40,8 +40,8 @@ return (n);
 
 /**
 * main - multiplies two numbers
-* @argc: number of arguments
-* @argv: array of arguments
+* @argc: arguments count
+* @argv: array of strings
 * Return: 0 (Success), else if error 1
 */
 int main(int argc, char *argv[])
