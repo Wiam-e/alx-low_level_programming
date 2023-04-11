@@ -8,32 +8,32 @@
 */
 int **alloc_grid(int width, int height)
 {
-int **g;
+int **g2;
 int i, j = 0;
 if (width <= 0 || height <= 0)
 return (NULL);
-g = malloc(height *sizeof(*g));
+g2 = malloc(height *sizeof(int));
 
-if (g == NULL)
+if (g2 == NULL)
 return (NULL);
 
 for (i = 0; i < height; i++)
 {
-g[i] = malloc(width *sizeof(**g));
-if (g[i] == NULL)
+g2[i] = malloc(width *sizeof(int));
+if (g2[i] == NULL)
 {
-free(g);
+free(g2);
 for (j = 0; j <= i; j++)
 {
-free(g[j]);
+free(g2[j]);
 return (NULL);
 }
 }
 while (j < width)
 {
-g[i][j] = 0;
+g2[i][j] = 0;
 j++;
 }
 }
-return (g);
+return (g2);
 }
