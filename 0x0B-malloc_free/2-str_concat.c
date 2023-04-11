@@ -24,7 +24,7 @@ if (c == NULL)
 return (NULL);
 }
 }
-for (k = 0, d = 0; k < (i + j + 1); k++)
+for (k = 0, l = 0; k < (i + j + 1); k++)
 {
 if (k < i)
 c[k] = s1[k];
