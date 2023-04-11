@@ -12,14 +12,14 @@ int **g2;
 int i, j = 0;
 if (width <= 0 || height <= 0)
 return (NULL);
-g2 = malloc(height *sizeof(*g2));
+g2 = malloc(height * sizeof(*g2));
 
 if (g2 == NULL)
 return (NULL);
 
 for (i = 0; i < height; i++)
+g2[i] = malloc(width * sizeof(**g2));
 {
-g2[i] = malloc(width *sizeof(*g2));
 if (g2[i] == NULL)
 {
 free(g2);
