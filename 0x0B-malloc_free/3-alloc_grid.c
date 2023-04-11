@@ -22,17 +22,20 @@ g2[i] = malloc(width * sizeof(**g2));
 {
 if (g2[i] == NULL)
 {
+{
 free(g2);
+return (NULL);
+}
 for (j = 0; j <= i; j++)
 {
 free(g2[j]);
 return (NULL);
 }
 }
-while (j < width)
+
+for (j = 0; j < width; j++)
 {
 g2[i][j] = 0;
-j++;
 }
 }
 return (g2);
