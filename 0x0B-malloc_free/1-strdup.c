@@ -13,9 +13,7 @@ unsigned int i = 0, l;
 if (str == NULL)
 return (NULL);
 for (l = 0; str[l]; l++)
-{
 dbl = malloc(sizeof(char) * (l + 1));
-}
 if (dbl == NULL)
 return (NULL);
 
