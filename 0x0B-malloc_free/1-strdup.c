@@ -9,7 +9,7 @@
 char *_strdup(char *str)
 {
 char *dbl;
-unsigned int i, l;
+unsigned int i = 0, l;
 if (str == NULL)
 return (NULL);
 for (l = 0; str[l]; l++)
@@ -19,7 +19,7 @@ dbl = malloc(sizeof(char) * (l + 1));
 if (dbl == NULL)
 return (NULL);
 
-for (i = 0; (dbl[i] = str[i]) != '\0'; i++)
-
+while ((dbl[i] = str[i]) != '\0')
+i++;
 return (dbl);
 }
