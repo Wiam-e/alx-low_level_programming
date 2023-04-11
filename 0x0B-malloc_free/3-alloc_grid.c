@@ -13,14 +13,14 @@ int i, j = 0;
 if (width <= 0 || height <= 0)
 return (NULL);
 
-g = (int *) malloc(height * sizeof(*g));
+g = malloc(height * sizeof(*g));
 
 if (g == NULL)
 return (NULL);
 
 for (i = 0; i < height; i++)
 {
-g[i] = (int *) malloc(width * sizeof(**g));
+g[i] = malloc(width * sizeof(**g));
 if (g[i] == NULL)
 {
 free(g);
@@ -34,6 +34,7 @@ while (j < width)
 {
 g[i][j] = 0;
 j++;
+}
 }
 return (g);
 }
