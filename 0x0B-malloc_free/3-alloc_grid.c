@@ -13,7 +13,7 @@ int i = 0, j = 0;
 if (width + height < 2 || width < 1 || height < 1)
 return (NULL);
 
-g = (int *) malloc(height * sizeof(*g));
+g = malloc(height * sizeof(*g));
 
 if (g == NULL)
 return (NULL);
