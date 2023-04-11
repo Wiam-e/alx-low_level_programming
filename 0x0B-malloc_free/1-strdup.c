@@ -12,8 +12,8 @@ char *dbl;
 unsigned int i = 0, l;
 if (str == NULL)
 return (NULL);
-for (l = 0; str[l]; l++)
-dbl = malloc(sizeof(char) * (l + 1));
+for (l = 0; str[l] > 0; l++)
+dbl = malloc(sizeof(char) * l);
 if (dbl == NULL)
 return (NULL);
 
