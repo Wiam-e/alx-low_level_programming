@@ -16,7 +16,7 @@ while (str[l])
 {
 l++;
 }
-dbl = malloc(sizeof(char) * (l+1));
+dbl = malloc(sizeof(char) * (l + 1));
 if (dbl == NULL)
 return (NULL);
 
