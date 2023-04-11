@@ -19,7 +19,7 @@ return (NULL);
 
 for (i = 0; i < height; i++)
 {
-g[i] = malloc(width * sizeof(**g) + 1));
+g[i] = malloc(width * (sizeof(**g) + 1));
 if (g[i] == NULL)
 {
 free(g);
