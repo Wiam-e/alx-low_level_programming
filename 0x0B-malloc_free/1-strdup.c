@@ -14,7 +14,7 @@ if (str == NULL)
 return (NULL);
 for (l = 0; str[l]; l++)
 {
-dup = malloc(sizeof(char) * (l + 1));
+dbl = malloc(sizeof(char) * (l + 1));
 }
 if (dbl == NULL)
 return (NULL);
