@@ -13,7 +13,9 @@ unsigned int i, l;
 if (str == NULL)
 return (NULL);
 for (l = 0; str[l]; l++)
+{
 dup = malloc(sizeof(char) * (l + 1));
+}
 if (dbl == NULL)
 return (NULL);
 for (i = 0; (dbl[i] = str[i]) != '\0'; i++)
