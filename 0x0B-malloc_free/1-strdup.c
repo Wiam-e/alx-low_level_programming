@@ -18,6 +18,8 @@ dbl = malloc(sizeof(char) * (l + 1));
 }
 if (dbl == NULL)
 return (NULL);
+
 for (i = 0; (dbl[i] = str[i]) != '\0'; i++)
+
 return (dbl);
 }
