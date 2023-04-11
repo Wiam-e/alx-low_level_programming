@@ -19,6 +19,7 @@ return (NULL);
 
 while (i < height)
 {
+{
 g[i] = malloc(width * sizeof(**g));
 if (g[i] == NULL)
 {
@@ -28,7 +29,7 @@ free(g);
 return (NULL);
 }
 i++;
-
+}
 while (j < width)
 g[i][j] = 0;
 j++;
