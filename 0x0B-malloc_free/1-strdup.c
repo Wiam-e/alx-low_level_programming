@@ -15,12 +15,14 @@ return (NULL);
 while (str[l])
 {
 l++;
-dbl = malloc(sizeof(char) * l);
 }
+dbl = malloc(sizeof(char) * (l+1));
 if (dbl == NULL)
 return (NULL);
 
 while ((dbl[i] = str[i]) != '\0')
+{
 i++;
+}
 return (dbl);
 }
