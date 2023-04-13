@@ -31,12 +31,10 @@ return (s);
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 char *p;
-p = malloc(size * nmemb);
-
-if (p == NULL)
-return (NULL);
-
 if (nmemb <= 0 || size <= 0)
+return (NULL);
+p = malloc(size * nmemb);
+if (p == NULL)
 return (NULL);
 
 _memset(p, 0, nmemb * size);
