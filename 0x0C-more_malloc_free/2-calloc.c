@@ -25,13 +25,13 @@ return (s);
 * *_calloc - function that allocates memory for an array using malloc.
 * @nmemb: number of elements in the array.
 * @size: byte size of element individualy.
-* Return: pointer to allocated memory, 
+* Return: pointer to allocated memory,
 * or NULL if nmemb or size are equal to 0, or if malloc fails.
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 char *p;
-p = malloc(size * nmemb);
+p = malloc(sizeof(size) * nmemb);
 if (p == NULL)
 return (NULL);
 
