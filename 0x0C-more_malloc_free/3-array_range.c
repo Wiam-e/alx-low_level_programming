@@ -14,11 +14,13 @@ i = 0;
 size = max - min + 1;
 p = malloc(sizeof(int) * size);
 if ((min > max) || (p == NULL))
+{
 return (NULL);
+}
 while (min <= max)
 {
-p[i] = min++;
 i++;
+p[i] = min++;
 }
 return (p);
 }
