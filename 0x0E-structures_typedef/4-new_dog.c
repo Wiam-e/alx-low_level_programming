@@ -44,9 +44,7 @@ for (k = 0; k <= i; k++)
 n[k] = name[k];
 }
 for (k = 0; k <= j; k++)
-{
 o[k] = owner[k];
-}
 doggy->name = n;
 doggy->age = age;
 doggy->owner = o;
