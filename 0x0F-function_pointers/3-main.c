@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "3-calc.h"
 /**
 * main - program that performs as a calculator
