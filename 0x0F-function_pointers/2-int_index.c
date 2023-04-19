@@ -3,7 +3,7 @@
 /**
 * int_index - function that searches for an integer.
 * @array: pointer to array of int type
-* @size: number of elements in the array 
+* @size: number of elements in the array
 * @cmp: pointer to function of int type
 * Return: index of the first element for which the cmp function
 * does not give back 0
@@ -14,7 +14,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 int x = 0;
 if (array == NULL)
 return (-1);
-	
+
 if (size <= 0)
 return (-1);
 
