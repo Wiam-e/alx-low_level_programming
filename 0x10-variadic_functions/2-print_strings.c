@@ -12,15 +12,13 @@ va_list ps;
 char *s;
 unsigned int i;
 va_start(ps, n);
-
-for (i = 0; i < n; i++)
-{
 s = va_arg(ps, char*);
 if (s != NULL)
 printf("%s", s);
 else if (s == NULL)
 printf("(nil)");
-
+for (i = 0; i < n; i++)
+{
 if (separator != NULL && i != (n - 1))
 printf("%s", separator);
 }
