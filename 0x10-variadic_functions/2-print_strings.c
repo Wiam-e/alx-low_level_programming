@@ -17,7 +17,7 @@ for (i = 0; i < n; i++)
 {
 s = va_arg(ps, char*);
 if (s != NULL)
-printf("%s", hold);
+printf("%s", s);
 else if (s == NULL)
 printf("(nil)");
 
