@@ -33,13 +33,13 @@ break;
 
 case 's':
 s = va_arg(l, char *);
-if (s == NULL)
-printf ("(nil)");
-else
+if (s != NULL)
 printf("%s%s", separator, s);
+else
+printf("(nil)");
 break;
 default:
-continue;
+i++;
 }
 separator = ", ";
 i++;
