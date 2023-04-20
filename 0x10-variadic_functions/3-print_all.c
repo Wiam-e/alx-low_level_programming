@@ -13,8 +13,10 @@ int i = 0, j;
 va_list lst;
 char *sep;
 pt f[] = {
-{"c", prnt_c}, {"i", prnt_i},
-{"f", prnt_flt}, {"s", prnt_s},
+{"c", prnt_c},
+{"i", prnt_i},
+{"f", prnt_flt},
+{"s", prnt_s},
 {NULL, NULL}
 };
 va_start(lst, format);
