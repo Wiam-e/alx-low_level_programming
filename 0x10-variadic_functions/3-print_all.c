@@ -41,6 +41,7 @@ break;
 printf("%s%s", separator, s);
 break;
 }
+separator = ", ";
 i++;
 }
 printf("\n");
