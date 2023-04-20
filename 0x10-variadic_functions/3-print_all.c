@@ -40,6 +40,7 @@ printf("(nil)");
 break;
 default:
 i++;
+continue;
 }
 separator = ", ";
 i++;
