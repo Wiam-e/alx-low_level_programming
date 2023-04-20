@@ -37,7 +37,9 @@ break;
 }
 printf("%s%s", separator, s);
 break;
+default:
 i++;
+continue;
 }
 separator = ", ";
 i++;
