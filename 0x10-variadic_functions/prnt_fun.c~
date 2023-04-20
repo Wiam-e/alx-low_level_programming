@@ -1,0 +1,50 @@
+prnt_fun.c
+#include "variadic_functions.h"
+#include <stdio.h>
+#include <stdarg.h>
+/**
+* print_int - function that prints ints
+* @i: va_list type
+* Return: Success
+*/
+void print_int(va_list i)
+{
+printf("%d", va_arg(i, int));
+}
+
+/**
+ * print_char - function that prints a char
+ * @c: va_list type
+ * Return: Success
+ */
+void print_char(va_list c)
+{
+printf("%c", va_arg(c, int));
+}
+
+/**
+* print_float - function that prints floats
+* @f: va_list type
+* Return:Success
+*/
+void print_float(va_list f)
+{
+printf("%f", va_arg(f, double));
+}
+
+/**
+* print_string - function to print string
+* @a: va_list type
+* Return: Success
+ */
+void print_string(va_list a)
+{
+char *s;
+s = va_arg(a, char*);
+if (s == NULL)
+{
+printf("(nil)");
+}
+printf("%s", s);
+}
+
