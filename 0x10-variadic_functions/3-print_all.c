@@ -44,7 +44,7 @@ default:
 i++;
 continue;
 }
-sep = ", ";
+separator = ", ";
 i++;
 }
 }
