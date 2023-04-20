@@ -22,27 +22,22 @@ switch (format[i])
 case 'i':
 printf("%s%d", separator, va_arg(l, int));
 break;
-
 case 'f':
 printf("%s%f", separator, va_arg(l, double));
 break;
-
 case 'c':
 printf("%s%c", separator, va_arg(l, int));
 break;
-
 case 's':
 s = va_arg(l, char *);
-if (s == NULL)
+if (!s)
 {
 printf("(nil)");
 break;
 }
 printf("%s%s", separator, s);
 break;
-default:
 i++;
-continue;
 }
 separator = ", ";
 i++;
