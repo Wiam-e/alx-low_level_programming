@@ -8,7 +8,6 @@ main:
 	mov rax, 0
 	mov rdi, 0
 	mov rsi, msg
-	mov rdx, 13
 	call printf
 
 	mov rax, 0
