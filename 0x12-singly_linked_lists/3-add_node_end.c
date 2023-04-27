@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include "lists.h"
-
 /**
  * add_node_end - function to add a new node at the end of a linkedlist
  * @head: double pointer to head
@@ -10,31 +9,32 @@
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_node;
-	list_t *temp = *head;
-	unsigned int len = 0;
-
-	while (str[len])
-		len++;
+	list_t *new_node, *temp;
+	size_t l;
 
 	new_node = malloc(sizeof(list_t));
-	if (new_node != NULL)
+	if (new_node == NULL)
 		return (NULL);
 
 	new_node->str = strdup(str);
-	new_node->len = len;
-	new_node->next = NULL;
 
-	if (*head == NULL)
+	for (l = 0; str[l]; l++)
+		;
+
+	new_node->len = l;
+	new_node->next = NULL;
+	temp = *head;
+
+	if (temp == NULL)
 	{
-		*head = new_node;
-		return (new_node);
+	*head = new;
+	}
+	else
+	{
+		while (temp->next != NULL)
+		temp = temp->next;
+		temp->next = new;
 	}
 
-	while (temp->next)
-		temp = temp->next;
-
-	temp->next = new_node;
-
-	return (new_node);
+	return (*head);
 }
