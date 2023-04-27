@@ -3,18 +3,17 @@
 /**
  * free_list - function that frees a linked list
  * @head: head of linked list
- * Return: 0 (Success)
+ * Return: 0
  */
 void free_list(list_t *head)
 {
-  list_t *h, *fr;
+	list_t *h;
 
 	h = head;
 	while (h != NULL)
 	{
-		fr = h->next;
-		free(h->str);
+	free(h->str);
 		free(h);
-		h = fr;
+		h = h->next;
 	}
 }
