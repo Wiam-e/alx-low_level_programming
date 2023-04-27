@@ -10,7 +10,7 @@ size_t print_list(const list_t *h)
 	size_t s = 0;
 
 	if (str == NULL)
-	printf("[0] (nil)",str);
+	printf("[0] (nil)");
 	else
 	{
 	while (h != NULL)
