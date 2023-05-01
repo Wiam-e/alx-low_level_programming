@@ -4,23 +4,20 @@
  * at index of a linked list.
  * @head: pointer head of a list.
  * @index: index of the list where the node is deleted.
- * Return: 1 (Success), otherwise (Fail)
+ * Return: 1 (Success), otherwise -1 (Fail)
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	unsigned int i;
 	listint_t *prev;
 	listint_t *next;
-
 	prv = *head;
 
 	if (index != 0)
 	{
-	i = 0;
-	while (i < index - 1 && prev != NULL)
+	for (i = 0; i < index - 1 && prev != NULL; i++)
 	{
 	prv = prv->next;
-	i++;
 	}
 	}
 	if (prv == NULL || (prv->next == NULL && index != 0))
