@@ -21,19 +21,19 @@ size_t free_listint_safe(listint_t **h)
 	{
 		if (hd - hd->next)
 		{
-		  space = (*h)->next;
-			free(*hd);
-			*h = space;
+		  space = (hd)->next;
+			free(hd);
+			hd = space;
 			l++;
 		}
 		else
 		{
-			free(*h);
-			(*h) = NULL;
+			free(hd);
+			(hd) = NULL;
 			l++;
 			break;
 		}
 	}
-	*h = NULL;
+	hd = NULL;
 	return (l);
 }
