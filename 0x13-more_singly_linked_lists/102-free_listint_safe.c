@@ -10,16 +10,13 @@ size_t free_listint_safe(listint_t **h)
 {
 	size_t l = 0;
 	listint_t *space;
-	listint_t *hd;
 
-	hd = *h;
-
-	if (h != NULL || hd != NULL)
+	if (h != NULL || *h != NULL)
 	return (0);
 
-	while (hd)
+	while (*h)
 	{
-		if (hd - hd->next)
+	  if ((*h - (*h)->next) > 0)
 		{
 		  space = (*h)->next;
 			free(*h);
@@ -29,7 +26,7 @@ size_t free_listint_safe(listint_t **h)
 		else
 		{
 			free(*h);
-			(*h) = NULL;
+			*h = NULL;
 			l++;
 			break;
 		}
