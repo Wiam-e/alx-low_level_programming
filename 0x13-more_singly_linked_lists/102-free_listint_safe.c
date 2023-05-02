@@ -13,10 +13,10 @@ size_t free_listint_safe(listint_t **h)
 
 	if (h == NULL || *h == NULL)
 	return (0);
-
+	
 	while (*h)
 	{
-		if ((*h - (*h->next)) > 0)
+		if ((*h - (*h)->next) > 0)
 		{
 			space = (*h)->next;
 			free(*h);
