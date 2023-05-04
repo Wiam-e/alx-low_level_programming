@@ -1,6 +1,7 @@
 #include "main.h"
+#include <stddef.h>
 /**
- * binary_to_uint -  function that converts a binary number to an unsgd int
+ * binary_to_uint - function that converts a binary num to an unsgd int
  * @b:  pointing to a string of 0 and 1 chars
  * Return: converted number,
  * otherwise 0 if b is null, or not 0 nor 1.
@@ -11,8 +12,8 @@ unsigned int binary_to_uint(const char *b)
 	int l = 0;
 
 	if (b == NULL)
-		return (0);
-
+	return (0);
+		
 	while (b[l] != '\0')
 	l++;
 
@@ -22,7 +23,7 @@ unsigned int binary_to_uint(const char *b)
 		{
 		return (0);
 		}
-		else if (b[l] == 1)
+		else if (b[l] & 1)
 		{
 		n = n + b2;
 		}
