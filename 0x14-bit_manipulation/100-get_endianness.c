@@ -5,13 +5,9 @@
  */
 int get_endianness(void)
 {
-	unsigned int n = 1;
-	char *c;
-
-	c = (char *) &n;
-
-	if (c == 1)
-	return 1;
-	else 
+	int n = 1;
+	if (*(char *)&n != 1)
 	return (0);
+	else
+	return (1);
 }
