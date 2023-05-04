@@ -1,17 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <unistd.h>
-
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- * Return: On success 1, otherwise -1 (Error).
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
 /**
  * print_binary - function that prints a number in binary.
  * @n: decimal number.
