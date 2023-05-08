@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 	error_fc = close(fl2);
 	if (error_fc == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fl %d\n", fl1);
+		dprintf(STDERR_FILENO, "Error: Can't close fl %d\n", fl2);
 		exit(100);
 	}
 	return (0);
