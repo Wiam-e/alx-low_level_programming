@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 	nc = 1024;
 	while (nc == 1024)
 	{
-		nc = read(f1, bffr, 1024);
+		nc = read(fl1, bffr, 1024);
 		if (nc == -1)
 			error_file(-1, 0, argv);
 		nwrt = write(fl2, bffr, nc);
