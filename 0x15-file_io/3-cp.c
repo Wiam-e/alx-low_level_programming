@@ -22,20 +22,20 @@ void error_file(int file_from, int file_to, char *argv[])
 }
 
 /**
- * main - function checks the code
+ * main - function to check the code
  * @argc: number of arguments.
  * @argv: arguments vector.
  * Return: 0.
  */
 int main(int argc, char *argv[])
 {
-	int fl1, fl2, error_f;  /* fl1 is file_from, fl2 is file_to */
+	int fl1, fl2, error_fc;  /* fl1 is file_from, fl2 is file_to */
 	ssize_t nc, nwrt;
 	char bffr[1024];
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "%s\n", "Usage: cp fl1 fl2");
+		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 		exit(97);
 	}
 
@@ -54,17 +54,17 @@ int main(int argc, char *argv[])
 			error_file(0, -1, argv);
 	}
 
-	error_f = close(fl1);
-	if (error_f == -1)
+	error_fc = close(fl1);
+	if (error_fc == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fl1);
+		dprintf(STDERR_FILENO, "Error: Can't close fl %d\n", fl1);
 		exit(100);
 	}
 
-	error_f = close(fl2);
-	if (error_f == -1)
+	error_fc = close(fl2);
+	if (error_fc == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fl1);
+		dprintf(STDERR_FILENO, "Error: Can't close fl %d\n", fl1);
 		exit(100);
 	}
 	return (0);
