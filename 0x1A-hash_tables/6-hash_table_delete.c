@@ -9,25 +9,37 @@
 
 void hash_table_delete(hash_table_t *ht)
 {
-	unsigned long int size, index = 0;
-	hash_node_t *current, *tmp;
+	hash_node_t *node;
+	unsigned long int idx = 0;
 
-	if (!ht)
-		return;
-	size = ht->size;
-
-	while (index < size)
+	while (idx < ht->size)
 	{
-		current = ht->array[index];
-		while (current)
+		if (ht->array[idx])
 		{
-			tmp = current;
-			current = current->next;
-			free(tmp->value);
-			free(tmp);
+			node = ht->array[idx];
+			delete_node(node);
 		}
-		index++;
+		idx++;
 	}
 	free(ht->array);
 	free(ht);
 }
+/**
+ * delete_node - deletes a bucket
+ * @node: nodes to delete
+ */
+void delete_node(hash_node_t *node)
+{
+	hash_node_t *tmp;
+
+	while (node)
+	{
+		tmp = node;
+		free(node->key);
+		if (node->value)
+			free(node->value);
+		node = node->next;
+		free(tmp);
+	}
+}
+
